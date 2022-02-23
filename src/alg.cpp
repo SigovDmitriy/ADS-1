@@ -3,13 +3,13 @@
 #include "alg.h"
 #include <math.h>
 
+
 bool checkPrime(uint64_t value) {
   for (uint64_t g = 2 ; g <= sqrt(value); g++) {
   if (value % g == 0) {
     return false;
   }
-  }
-  if (value == 1) {
+  if (value == 1) 
     return false;
   }
   return true;
@@ -19,12 +19,13 @@ uint64_t count = 0;
 uint64_t g = 1;
 while (g++) {
   if (checkPrime(g)) {
-    count += 1 ;
+    count++;
     if (n == count) {
       return g;
       }
     }
   }
+}
 uint64_t nextPrime(uint64_t value) {
 uint64_t g = value;
 while (g++) {
@@ -32,6 +33,7 @@ while (g++) {
     return g;
     }
   }
+}
 uint64_t sumPrime(uint64_t hbound) {
 uint64_t sum = 0;
 for (uint64_t g = 2; g < hbound; g++) {
