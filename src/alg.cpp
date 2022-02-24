@@ -22,22 +22,19 @@ while (n != count) {
   if (checkPrime(g)) {
     count++;
     if (n == count) {
-      return g;
+      break;
       }
     }
   }
+  return g;
 }
 uint64_t nextPrime(uint64_t value) {
-bool b = true;
 uint64_t g = value + 1;
-while () {
+while (!checkPrime(g)) {
   g++;
-  if (checkPrime(g)) {
-    return g;
-    break;
     }
+  return g;
   }
-}
 uint64_t sumPrime(uint64_t hbound) {
 uint64_t sum = 0;
 for (uint64_t g = 2; g < hbound; g++) {
