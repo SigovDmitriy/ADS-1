@@ -17,21 +17,20 @@ bool checkPrime(uint64_t value) {
 uint64_t nPrime(uint64_t n) {
 uint64_t count = 0;
 uint64_t g = 1;
-while (count != -1) {
+while (n != count) {
   g++;
   if (checkPrime(g)) {
     count++;
     if (n == count) {
       return g;
-      break;
       }
     }
   }
 }
 uint64_t nextPrime(uint64_t value) {
 bool b = true;
-uint64_t g = value;
-while (b == true) {
+uint64_t g = value + 1;
+while () {
   g++;
   if (checkPrime(g)) {
     return g;
