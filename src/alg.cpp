@@ -1,6 +1,6 @@
 // Copyright 2022 NNTU-CS
 #include <cstdint>
-#include <math.h>
+#include <cmath>
 #include "alg.h"
 
 
@@ -23,6 +23,7 @@ while (count != -1) {
     count++;
     if (n == count) {
       return g;
+      break;
       }
     }
   }
@@ -34,6 +35,7 @@ while (b == true) {
   g++;
   if (checkPrime(g)) {
     return g;
+    break;
     }
   }
 }
